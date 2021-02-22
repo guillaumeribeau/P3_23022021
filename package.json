@@ -1,0 +1,21 @@
+{
+  "name": "p3_23022021",
+  "version": "1.0.0",
+  "description": "oh my food openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaumeribeau/P3_23022021.git"
+  },
+  "keywords": [
+    "Soleil1985"
+  ],
+  "author": "guillaume ribeau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillaumeribeau/P3_23022021/issues"
+  },
+  "homepage": "https://github.com/guillaumeribeau/P3_23022021#readme"
+}
