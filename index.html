@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" legend__restaurant="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
    <script src="https://kit.fontawesome.com/344014b846.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="public/css/style.css">
@@ -30,104 +30,127 @@
    <!---section avec le bouton explorer-->
 <section class=explorer>
 
-    <p class=description>
-        <h1>Reservez le Menu qui vous convient</h1>
-        Découvrez des restaurants d'exception, séléctionnés par nos soins.
-    </p>
- 
-       <button class="btn__explorer" type="button" >Explorer nos restaurants
+    <div>
+       </p>
+        <h1>Reservez le Menu qui <br> vous convient</h1>
+       <p> Découvrez des restaurants d'exception, <br> séléctionnés par nos soins. 
+   </div>
 
-       </button>
+    <div>
+       <button class="btn__explorer" type="button">Explorer nos restaurants</button>
+    </div>
+  
 
 </section>
 
 <!---section explication du fonctionnement-->
+ <h2>Fonctionnement</h2>
 
 <section class="fonctionnement">
 
- <h2>Fonctionnement</h2>
 
-     <div class="choisissez">
-       <p>1 <i class="fas fa-mobile-alt"></i>Choississez un restaurant</p>
+
+     <div class="card__fonctionnement">
+       <p><h4>1</h4></p>
+       <div><i class="fas fa-mobile-alt"></i></div>
+       <p>Choississez un restaurant</p>
      </div>
 
 
-    <div class="composez">
-    <p>2<i class="fas fa-list"></i>Composez votre menu</p>
+    <div class="card__fonctionnement">
+     <p><h4>2</h4></p>
+    <div><i class="fas fa-list"></i></div>
+    <p>Composez votre menu</p>
     </div>
 
 
-    <div class="degustez">
-    <p>3 <i class="fas fa-utensils"></i>dégustez au restaurant</p>
+    <div class="card__fonctionnement">
+     <p><h4>3</h4></p>
+    <div><i class="fas fa-utensils"></i></div>
+    <p>dégustez au restaurant</p>
     </div>
   
 </section>
 
 <!---section avec tous les restaurants-->
+<h1>Restaurants</h1>
 
-<section class="lesrestaurants">
+<section class="restaurant">
 
-        <article class="card">
+        <article class="card__restaurant">
 
         <img src="public/img/restaurants/palette_du_gout.jpg">
-            <div class="content">
-                <p><h2>La palette du gout</h2>
+
+            <div class="legend__restaurant">
+                    
+                <div class="nom__restaurant">
+                   <h2>La palette du gout</h2>
                     <h3>Mélimontant</h3>
-                    <i class="far fa-heart"></i>
-                </p>
+                </div>
+                    <div><i class="far fa-heart"></i></div>
             </div>
                 
         </article>
 
 
-        <article class="card">
+        <article class="card__restaurant">
 
         <img src="public/img/restaurants/la_note_enchantee.jpg">
-             <div class="content">
-                <p> <h2>La note enchantée</h2>
+             <div class="legend__restaurant">
+                <div class="nom__restaurant">
+                     <h2>La note enchantée</h2>
                     <h3>Mélimontant</h3>
-                    <i class="far fa-heart"></i>
-                 </p>
+                </div>
+                   <div><i class="far fa-heart"></i></div>
             </div>
-                    
+         </article>  
 
-            <article class="card">
+            <article class="card__restaurant">
 
             <img src="public/img/restaurants/a_la_francaise.jpg">
-            <div class="content">
-                <p><h2>A la française</h2>
-                    <h3>cité rouge</h3>
-                    <i class="far fa-heart"></i>
-                </p>
+
+            <div class="legend__restaurant">
+                <div class="nom__restaurant">
+                  <h2>A la française</h2>
+                  <h3>cité rouge</h3>
+               </div>
+
+                 <div><i class="far fa-heart"></i></div>
             </div>
                 
             </article>
 
-            <article class="card">
+            <article class="card__restaurant">
                 
             <img src="public/img/restaurants/Le_delice.jpg">
-                <div class="content">
-                    <p> <h2>Le délice des sens</h2>
-                        <h3>Folie-Mericourt</h3>
-                        <i class="far fa-heart"></i>
-                    </p>
+
+                <div class="legend__restaurant">
+
+               <div class="nom__restaurant">
+                    <h2>Le délice des sens</h2>
+                    <h3>Folie-Mericourt</h3>
+                </div>
+                      <div><i class="far fa-heart"></i></div>
+                    
                 </div>
                                 
-                   
-    </section>
+</section>
 
 
 <!---le Footer -->
 
 <footer class="footer">
-<img src="public/img/logo/ohmyfood.png" alt="logo">
 
+<div><img src="public/img/logo/ohmyfood.png" alt="logo"></div>
+
+<div>
 <ul class=liste_footer>
   <li><a href="#"> <i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-  <li><a href="#"><i class="fas fa-handshake"></i> Devenir partenaire</a></li>
+  <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
   <li><a href="#">Mentions légales</a></li>
   <li><a href="#">Contact</a></li>
 </ul>
+</div>
 
 </footer>
 

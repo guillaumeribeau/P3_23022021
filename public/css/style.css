@@ -1,32 +1,147 @@
 /* polices */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/* header*/
-.header {
-  display: flex;
-  justify-content: space-around;
+body {
+  font-family: "Roboto", "sans serif";
 }
 
+/* header*/
 .logo {
   display: flex;
   justify-content: space-around;
 }
 .logo img {
-  width: 20%;
+  width: 30%;
 }
 
 .input_container {
+  display: flex;
+  justify-content: center;
   position: relative;
+  margin-top: 20px;
+}
+
+input {
+  text-align: center;
+  background-color: lightgray;
+  font-size: 20px;
   width: 100%;
 }
 
 .input_icon {
+  padding-top: 4px;
+  padding-right: 170px;
   position: absolute;
-  top: 2px;
-  color: red;
-  left: 2px;
   font-size: 21px;
-  width: 50px;
+}
+
+/* paragraphe et bouton explorer */
+.explorer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.explorer h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.explorer p {
+  margin-top: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn__explorer {
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #FF79DA;
+}
+
+/* section fonctionnement*/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card__fonctionnement {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  border: lightpink solid 2px;
+  background-color: #f0e9e9;
+  border-radius: 20px;
+  height: 60px;
+}
+.card__fonctionnement h4 {
+  border-radius: 50%;
+  border: solid 0px lightgray;
+  padding: 6px;
+  margin-right: 15px;
+  margin-left: -8px;
+  background-color: #9356DC;
+}
+.card__fonctionnement div i {
+  margin-right: 15px;
+}
+
+/* section avec tous les restaurants*/
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+}
+
+.card__restaurant {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  border: solid 2px violet;
+  background-color: white;
+}
+.card__restaurant img {
+  border-radius: 20px;
+}
+
+.legend__restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.legend__restaurant div i {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+/*footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: black;
+}
+footer img {
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 100px;
+}
+footer ul {
+  list-style: none;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer i {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
