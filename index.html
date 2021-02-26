@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
    <script src="https://kit.fontawesome.com/344014b846.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="public/css/style.css">
 </head>
 
 
@@ -16,11 +17,12 @@
 <header>
 
     <div class="logo"> <img src="public/img/logo/ohmyfood.png" alt="logo du restaurant"></div>
-     <form action="traitement.php">
-            <div class="input_icon">
-            <i class="fas fa-map-marker-alt"></i>
-            <input type="search" id="search" placeholder="Paris,Belleville"> 
-          </div>
+     <form method="post" action="traitement.php">
+            <div class="input_container">
+                <span class="input_icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                <input type="search" name="search" placeholder="Paris,Belleville">
+              </div>
+            
      </form>
 
 </header>
@@ -29,7 +31,7 @@
 <section class=explorer>
 
     <p class=description>
-        <h1>>Reservez le Menu qui vous convient</h1>
+        <h1>Reservez le Menu qui vous convient</h1>
         Découvrez des restaurants d'exception, séléctionnés par nos soins.
     </p>
  
