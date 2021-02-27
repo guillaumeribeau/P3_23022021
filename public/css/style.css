@@ -3,6 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   font-family: "Roboto", "sans serif";
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "shrikhand", "sans-serif";
+  font-weight: 500;
 }
 
 /* header*/
@@ -52,7 +58,7 @@ input {
   text-align: center;
 }
 
-.btn__explorer {
+.btn {
   width: 200px;
   height: 35px;
   border-radius: 20px;
@@ -142,6 +148,84 @@ footer a {
 }
 footer i {
   margin-right: 5px;
+}
+
+/* ----fiche pour les restaurants-------------------------------*/
+/*header fiche restaurant*/
+.header__restaurant {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.header__logo div i {
+  padding-left: 20px;
+}
+
+/* main fiche restaurants */
+.fiche__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px blue;
+  background-color: #f5f6fa;
+}
+
+.restaurant__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: solid springgreen 2px;
+  width: 90%;
+}
+.restaurant__title h1 {
+  padding-right: 100px;
+}
+
+.card__menu {
+  width: 90%;
+  border: solid red 2px;
+  margin-bottom: 40px;
+}
+
+.card__menu__title h2 {
+  border-bottom-width: 5px 5px 5px 5px;
+  border-bottom: 3px #99E2D0 solid;
+  font-weight: 300;
+  font-size: medium;
+}
+
+.choice {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  box-shadow: lightgray -5px -5px 5px 5px;
+}
+.choice h2 {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  font-size: small;
+}
+.choice h3 {
+  margin: 0;
+  padding: 10px 0 10px 10px;
+  font-size: smaller;
+  font-weight: 300;
+}
+
+.price {
+  align-self: flex-end;
+}
+.price h4 {
+  margin: 0;
+  padding: 0 10px 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

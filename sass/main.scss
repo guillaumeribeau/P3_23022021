@@ -24,8 +24,12 @@
 
 body{
     font-family: 'Roboto','sans serif';
+    box-sizing: border-box;
 }
-
+h1 {
+    font-family: "shrikhand", "sans-serif";
+    font-weight: 500;
+}
 
 
 /* header*/
@@ -85,7 +89,7 @@ body{
 }
 
 
-.btn__explorer {
+.btn{
 width:200px;
 height: 35px;
 border-radius: 20px;
@@ -198,4 +202,102 @@ footer {
 
 
 
+    
+/* ----fiche pour les restaurants-------------------------------*/
+
+/*header fiche restaurant*/
+.header__restaurant {
+    display: flex;
+    flex-direction: column;
       
+}
+
+
+.header__logo{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 15px;
+    
+      div i {
+        padding-left: 20px;
+      }
+        
+}
+
+/* main fiche restaurants */ 
+
+.fiche__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px blue;
+    background-color:$colour-background;
+
+}
+
+.restaurant__title {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    border: solid springgreen 2px;
+    width: 90%;
+       h1 {
+           padding-right: 100px;
+           
+       }
+  
+  
+    }
+
+
+
+
+    .card__menu {
+        width: 90%;
+        border: solid red 2px;
+        margin-bottom: 40px;
+        
+    }
+    .card__menu__title h2 {
+         border-bottom-width: 5px 5px 5px 5px;
+        border-bottom:3px $colour-tertiary solid ;
+        font-weight: 300;
+        font-size: medium;
+    }
+
+.choice {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        box-shadow: lightgray -5px -5px 5px 5px;
+   
+    
+
+    h2 { 
+        margin: 0;
+        padding:10px 0 0 10px;
+        font-size: small;
+    }
+    h3 {
+        margin: 0;
+        padding:10px 0 10px 10px;
+        font-size: smaller;
+        font-weight: 300;
+    }
+}
+  
+
+
+
+.price {
+    align-self: flex-end;
+     
+    h4{
+        margin: 0;
+        padding:0 10px 10px 0;
+    }
+}
+
