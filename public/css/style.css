@@ -9,6 +9,8 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 /* header*/
@@ -113,16 +115,18 @@ input {
   align-items: center;
   color: black;
   margin-bottom: 20px;
-  background-color: #9356DC transparent;
+  background-color: white;
   border-radius: 15px;
   height: 60px;
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
 }
 .card__fonctionnement:hover {
+  background-color: #f2eafb;
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
-  background-color: #ae80e5;
 }
-.card__fonctionnement h4 {
+.card__fonctionnement h5 {
   border-radius: 100%;
   border: solid 0px lightgray;
   padding: 7px;
@@ -142,7 +146,11 @@ input {
 .restaurant {
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
+  background-color: #ededed;
+}
+
+.restaurant__accueil__title {
+  margin-left: 20px;
 }
 
 .card__restaurant {
@@ -150,13 +158,27 @@ input {
   flex-direction: column;
   margin-right: 20px;
   margin-left: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   border-radius: 20px;
-  border: solid 2px violet;
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
   background-color: white;
+  position: relative;
+}
+.card__restaurant:hover {
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
 }
 .card__restaurant img {
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
+  height: 180px;
+}
+
+.name__restaurant h3 {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.name__restaurant h4 {
+  margin-left: 10px;
+  margin-top: 0;
 }
 
 .legend__restaurant {
@@ -165,8 +187,21 @@ input {
   align-items: center;
 }
 .legend__restaurant div i {
-  font-size: 20px;
+  font-size: 40px;
   margin-right: 20px;
+}
+
+.nouveau {
+  border: solid #99E2D0 1px;
+  width: 70px;
+  background-color: #99E2D0;
+  color: #278870;
+  text-align: center;
+  padding: 4px;
+  position: absolute;
+  right: 8%;
+  bottom: 85%;
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
 }
 
 /*footer*/
@@ -180,6 +215,7 @@ footer img {
   margin-top: 10px;
   margin-left: 40px;
   width: 100px;
+  background-color: blanchedalmond;
 }
 footer ul {
   list-style: none;
@@ -250,12 +286,12 @@ footer i {
   margin-bottom: 10px;
   box-shadow: lightgray -5px -5px 5px 5px;
 }
-.choice h2 {
+.choice h3 {
   margin: 0;
   padding: 10px 0 0 10px;
   font-size: small;
 }
-.choice h3 {
+.choice h4 {
   margin: 0;
   padding: 10px 0 10px 10px;
   font-size: smaller;
@@ -265,7 +301,7 @@ footer i {
 .price {
   align-self: flex-end;
 }
-.price h4 {
+.price h5 {
   margin: 0;
   padding: 0 10px 10px 0;
 }
