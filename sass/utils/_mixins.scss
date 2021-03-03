@@ -1,0 +1,6 @@
+@mixin lighten-btn {
+    background:linear-gradient(lighten($colour-primary, 5) 0%, lighten($colour-secondary, 10) 100%);
+    
+    
+}
+

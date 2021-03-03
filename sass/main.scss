@@ -25,11 +25,13 @@
 body{
     font-family: 'Roboto','sans serif';
     box-sizing: border-box;
+    margin: 0;
 }
-h1 {
-    font-family: "shrikhand", "sans-serif";
-    font-weight: 500;
+
+a{
+text-decoration: none;
 }
+
 
 
 /* header*/
@@ -55,11 +57,12 @@ h1 {
          background-color:lightgray;
          font-size: 20px;
          width: 100%;
+         padding:10px;
         }
 
          
 .input_icon{
-    padding-top:4px;
+    padding-top:10px;
     padding-right: 170px;
     position: absolute; 
      font-size: 21px; 
@@ -71,17 +74,20 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
+    background-color:$background-section-color;
    
     
     h1 {
         text-align: center;
         font-size: 22px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         
         
     }
      p{ 
          margin-top: 5px;
+         margin-bottom: 15px;
          font-size: 20px;
          text-align: center;
          
@@ -90,12 +96,39 @@ h1 {
 
 
 .btn{
+
 width:200px;
 height: 35px;
 border-radius: 20px;
-background-color: $colour-secondary;
+margin-bottom: 60px;
+margin-top: 25px;
+background: $background-btn;
+box-shadow:$box-shadow;
+color: white;
+border: none;     
+cursor: pointer;
+position: relative;
+z-index: 1;
+&:hover {
+    &::after {
+        opacity: 1;
+     }
 }
-
+&::after {
+    content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+    bottom: 0;
+    left: 0;
+   @include lighten-btn;
+   box-shadow: $box-shadow-visibility;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+    border-radius: 20px;
+}
+}
 
 /* section fonctionnement*/
 .fonctionnement {
@@ -104,32 +137,53 @@ background-color: $colour-secondary;
     justify-content: center;
     margin-left: 20px;
     margin-right:20px;
-    
 }
+
+       .fonctionnement__title{
+        margin-left: 20px;
+      
+      }
+
 
 .card__fonctionnement {
     display: flex;
     justify-content:left;
     align-items: center;
-    margin-bottom: 10px;
-    border:lightpink solid 2px;
-    background-color:rgb(240, 233, 233);
-    border-radius: 20px;
+    color: black;
+    margin-bottom: 20px;
+    background-color: $colour-primary transparent;
+    border-radius: 15px;
     height: 60px;
-    
+    box-shadow: $box-shadow;
+    &:hover{
+        box-shadow: $box-shadow-visibility;
+        background-color:lighten($colour-primary,10)
+       
+        }
+             
     
             h4{
-                border-radius: 50%;
+                border-radius: 100%;
                 border:solid 0px lightgray;
-                padding: 6px;
+                padding: 7px;
                 margin-right:15px;
                 margin-left: -8px;
+                color:white;
                 background-color: $colour-primary;
             }
+
             div i {
                 margin-right: 15px;
-            }
+                
+                &:hover {
+                    color: $colour-primary;
+                }
+           }
+
 }
+
+
+
 
 
 /* section avec tous les restaurants*/

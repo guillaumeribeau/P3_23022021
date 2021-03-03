@@ -4,11 +4,11 @@
 body {
   font-family: "Roboto", "sans serif";
   box-sizing: border-box;
+  margin: 0;
 }
 
-h1 {
-  font-family: "shrikhand", "sans-serif";
-  font-weight: 500;
+a {
+  text-decoration: none;
 }
 
 /* header*/
@@ -32,10 +32,11 @@ input {
   background-color: lightgray;
   font-size: 20px;
   width: 100%;
+  padding: 10px;
 }
 
 .input_icon {
-  padding-top: 4px;
+  padding-top: 10px;
   padding-right: 170px;
   position: absolute;
   font-size: 21px;
@@ -46,14 +47,17 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
+  background-color: #ededed;
 }
 .explorer h1 {
   text-align: center;
   font-size: 22px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .explorer p {
   margin-top: 5px;
+  margin-bottom: 15px;
   font-size: 20px;
   text-align: center;
 }
@@ -62,7 +66,32 @@ input {
   width: 200px;
   height: 35px;
   border-radius: 20px;
-  background-color: #FF79DA;
+  margin-bottom: 60px;
+  margin-top: 25px;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#a16be0 0%, #fface8 100%);
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 20px;
 }
 
 /* section fonctionnement*/
@@ -74,26 +103,39 @@ input {
   margin-right: 20px;
 }
 
+.fonctionnement__title {
+  margin-left: 20px;
+}
+
 .card__fonctionnement {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-bottom: 10px;
-  border: lightpink solid 2px;
-  background-color: #f0e9e9;
-  border-radius: 20px;
+  color: black;
+  margin-bottom: 20px;
+  background-color: #9356DC transparent;
+  border-radius: 15px;
   height: 60px;
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
+}
+.card__fonctionnement:hover {
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
+  background-color: #ae80e5;
 }
 .card__fonctionnement h4 {
-  border-radius: 50%;
+  border-radius: 100%;
   border: solid 0px lightgray;
-  padding: 6px;
+  padding: 7px;
   margin-right: 15px;
   margin-left: -8px;
+  color: white;
   background-color: #9356DC;
 }
 .card__fonctionnement div i {
   margin-right: 15px;
+}
+.card__fonctionnement div i:hover {
+  color: #9356DC;
 }
 
 /* section avec tous les restaurants*/
