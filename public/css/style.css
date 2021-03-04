@@ -135,10 +135,10 @@ input {
   color: white;
   background-color: #9356DC;
 }
-.card__fonctionnement div i {
+.card__fonctionnement div svg {
   margin-right: 15px;
 }
-.card__fonctionnement div i:hover {
+.card__fonctionnement div svg:hover {
   color: #9356DC;
 }
 
@@ -186,11 +186,34 @@ input {
   justify-content: space-between;
   align-items: center;
 }
-.legend__restaurant div i {
-  font-size: 40px;
-  margin-right: 20px;
+
+/*animation du coeur*/
+.heart svg {
+  font-size: 20px;
+  padding-right: 15px;
 }
 
+.heart svg path {
+  fill: transparent;
+  stroke-width: 25px;
+  stroke: black;
+}
+
+.heart svg:hover path {
+  animation: animate-heart 6s ease-in-out none;
+}
+
+@keyframes animate-heart {
+  0% {
+    fill: linear-gradient(0deg, #9356DC, #FF79DA);
+  }
+  25% {
+    fill: linear-gradient(0deg, #9356DC, #FF79DA);
+  }
+  100% {
+    fill: linear-gradient(0deg, #9356DC, #FF79DA);
+  }
+}
 .nouveau {
   border: solid #99E2D0 1px;
   width: 70px;
@@ -205,29 +228,71 @@ input {
 }
 
 /*footer*/
-footer {
+.footer {
   display: flex;
   flex-direction: column;
+  background-color: #353535;
   align-items: left;
-  background-color: black;
 }
-footer img {
-  margin-top: 10px;
-  margin-left: 40px;
-  width: 100px;
-  background-color: blanchedalmond;
-}
-footer ul {
+.footer ul {
   list-style: none;
 }
-footer a {
+.footer a {
   text-decoration: none;
-  color: white;
+  color: #f1f1f1;
 }
-footer i {
+.footer i {
   margin-right: 5px;
 }
 
+.footer__logo {
+  stroke: yellow;
+  fill: chartreuse;
+  width: 100px;
+}
+
+/*loading-spinner*/
+/*.loader {
+    height: 100%;
+    width: 100%;
+}
+
+.custom-loading-spinner {
+    cursor: progress;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.custom-loading-spinner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    overflow: hidden;
+    background: #0b0b0b;
+    opacity: 0.6;
+}
+.custom-loading-spinner::after {
+    box-sizing: border-box;
+    z-index: 10002;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: custom-loading 1s linear;
+}
+@keyframes custom-loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+ */
 /* ----fiche pour les restaurants-------------------------------*/
 /*header fiche restaurant*/
 .header__restaurant {
@@ -246,12 +311,19 @@ footer i {
 }
 
 /* main fiche restaurants */
+.image__restaurant {
+  width: 100%;
+}
+
 .fiche__menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: solid 2px blue;
   background-color: #f5f6fa;
+  position: relative;
+  margin-top: -12%;
+  border-radius: 30px 30px 0 0;
 }
 
 .restaurant__title {
@@ -260,6 +332,7 @@ footer i {
   justify-content: flex-start;
   border: solid springgreen 2px;
   width: 90%;
+  z-index: 3;
 }
 .restaurant__title h1 {
   padding-right: 100px;
@@ -284,7 +357,10 @@ footer i {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 10px;
-  box-shadow: lightgray -5px -5px 5px 5px;
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
+}
+.choice:hover {
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
 }
 .choice h3 {
   margin: 0;
@@ -304,6 +380,39 @@ footer i {
 .price h5 {
   margin: 0;
   padding: 0 10px 10px 0;
+}
+
+/*bouton commandez*/
+#btn__commander .btn {
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  margin-top: 25px;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+#btn__commander .btn:hover::after {
+  opacity: 1;
+}
+#btn__commander .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#a16be0 0%, #fface8 100%);
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

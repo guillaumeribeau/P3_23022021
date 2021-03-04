@@ -1,0 +1,38 @@
+@mixin btn__principal {
+    
+
+    .btn{
+    width:200px;
+    height: 35px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    margin-top: 25px;
+    background: $background-btn;
+    box-shadow:$box-shadow;
+    color: white;
+    border: none;     
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+         }
+    }
+    &::after {
+        content: "";
+       position: absolute;
+       top: 0;
+       right: 0;
+        bottom: 0;
+        left: 0;
+        @include lighten-btn;
+       box-shadow: $box-shadow-visibility;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: 20px;
+    }
+    }
+
+}

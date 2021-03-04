@@ -123,7 +123,7 @@ z-index: 1;
    right: 0;
     bottom: 0;
     left: 0;
-   @include lighten-btn;
+    @include lighten-btn;
    box-shadow: $box-shadow-visibility;
     opacity: 0;
     z-index: -1;
@@ -177,7 +177,7 @@ z-index: 1;
                 background-color: $colour-primary;
             }
 
-            div i {
+            div svg {
                 margin-right: 15px;
                 
                 &:hover {
@@ -242,13 +242,56 @@ z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
-    div i {
-        font-size: 40px;
-        margin-right: 20px;
-        }
+/*animation du coeur*/
+
+.heart svg {
+    font-size: 20px;
+    padding-right: 15px;
 
 }
+
+.heart svg path  {
+ fill: transparent;
+ stroke-width: 25px;
+ stroke:black
+}
+
+.heart svg:hover path {
+animation: animate-heart 6s ease-in-out none;
+
+}
+
+
+
+    @keyframes animate-heart{
+  
+        0%{
+         fill:$background-btn;
+        }
+        
+        25%{
+         fill: $background-btn;
+        }
+        
+      
+    
+        
+        100%{
+         fill: $background-btn;
+        }
+        
+      }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -270,32 +313,31 @@ z-index: 1;
 
 /*footer*/
 
-footer {
+.footer {
   display: flex;
   flex-direction: column ;
-  
+  background-color: #353535;
   align-items:left;
-  background-color: black;
-
-   img{
-        margin-top: 10px;
-        margin-left: 40px;
-    width: 100px;
-    background-color: blanchedalmond;
  
   
-    
-    }
+  
     ul {
         list-style: none;
     }
     a {
         text-decoration: none;
-        color: white;
+        color:#f1f1f1;
     }
     i {
         margin-right: 5px;
     }
+}
+
+.footer__logo {
+
+    stroke:yellow;
+    fill: chartreuse;
+    width: 100px;
 }
 
 
@@ -303,8 +345,49 @@ footer {
 
 
 
+/*loading-spinner*/
 
+/*.loader {
+    height: 100%;
+    width: 100%;
+}
 
+.custom-loading-spinner {
+    cursor: progress;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.custom-loading-spinner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    overflow: hidden;
+    background: #0b0b0b;
+    opacity: 0.6;
+}
+.custom-loading-spinner::after {
+    box-sizing: border-box;
+    z-index: 10002;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: custom-loading 1s linear;
+}
+@keyframes custom-loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+ */
 
 
     
@@ -332,13 +415,22 @@ footer {
 
 /* main fiche restaurants */ 
 
+.image__restaurant {
+width: 100%;
+}
+
+
+
 .fiche__menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: solid 2px blue;
     background-color:$colour-background;
-
+    position: relative;
+    margin-top: -12%;
+    border-radius: 30px 30px 0 0;
+    
 }
 
 .restaurant__title {
@@ -347,16 +439,12 @@ footer {
     justify-content:flex-start;
     border: solid springgreen 2px;
     width: 90%;
+    z-index:3;
+   
        h1 {
            padding-right: 100px;
-           
        }
-  
-  
-    }
-
-
-
+  }
 
     .card__menu {
         width: 90%;
@@ -377,7 +465,10 @@ footer {
     background-color: white;
         border-radius: 20px;
         margin-bottom: 10px;
-        box-shadow: lightgray -5px -5px 5px 5px;
+        box-shadow:$box-shadow;
+        &:hover{
+            box-shadow: $box-shadow-visibility;
+        }
    
     
 
@@ -406,3 +497,9 @@ footer {
     }
 }
 
+
+/*bouton commandez*/
+    
+#btn__commander{
+    @include btn__principal;
+}
