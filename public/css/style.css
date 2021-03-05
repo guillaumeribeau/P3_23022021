@@ -64,7 +64,7 @@ input {
   text-align: center;
 }
 
-.btn {
+.btn, .btn__commander {
   width: 200px;
   height: 35px;
   border-radius: 20px;
@@ -78,17 +78,17 @@ input {
   position: relative;
   z-index: 1;
 }
-.btn:hover::after {
+.btn:hover::after, .btn__commander:hover::after {
   opacity: 1;
 }
-.btn::after {
+.btn::after, .btn__commander::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(#a16be0 0%, #fface8 100%);
+  background: linear-gradient(#a16be0, #ff93e1);
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
   opacity: 0;
   z-index: -1;
@@ -135,10 +135,10 @@ input {
   color: white;
   background-color: #9356DC;
 }
-.card__fonctionnement div svg {
+.card__fonctionnement div i {
   margin-right: 15px;
 }
-.card__fonctionnement div svg:hover {
+.card__fonctionnement div i:hover {
   color: #9356DC;
 }
 
@@ -188,32 +188,7 @@ input {
 }
 
 /*animation du coeur*/
-.heart svg {
-  font-size: 20px;
-  padding-right: 15px;
-}
-
-.heart svg path {
-  fill: transparent;
-  stroke-width: 25px;
-  stroke: black;
-}
-
-.heart svg:hover path {
-  animation: animate-heart 6s ease-in-out none;
-}
-
-@keyframes animate-heart {
-  0% {
-    fill: linear-gradient(0deg, #9356DC, #FF79DA);
-  }
-  25% {
-    fill: linear-gradient(0deg, #9356DC, #FF79DA);
-  }
-  100% {
-    fill: linear-gradient(0deg, #9356DC, #FF79DA);
-  }
-}
+/*restaurant nouveau*/
 .nouveau {
   border: solid #99E2D0 1px;
   width: 70px;
@@ -345,22 +320,29 @@ input {
 }
 
 .card__menu__title h2 {
-  border-bottom-width: 5px 5px 5px 5px;
-  border-bottom: 3px #99E2D0 solid;
   font-weight: 300;
   font-size: medium;
+}
+.card__menu__title h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #99E2D0;
 }
 
 .choice {
   display: flex;
   justify-content: space-between;
   background-color: white;
+  width: 100%;
   border-radius: 20px;
   margin-bottom: 10px;
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 .choice:hover {
-  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
+  width: 90%;
 }
 .choice h3 {
   margin: 0;
@@ -374,45 +356,32 @@ input {
   font-weight: 300;
 }
 
-.price {
-  align-self: flex-end;
-}
-.price h5 {
-  margin: 0;
-  padding: 0 10px 10px 0;
-}
-
-/*bouton commandez*/
-#btn__commander .btn {
-  width: 200px;
-  height: 35px;
-  border-radius: 20px;
-  margin-bottom: 60px;
-  margin-top: 25px;
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-#btn__commander .btn:hover::after {
-  opacity: 1;
-}
-#btn__commander .btn::after {
-  content: "";
+.animate__check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(#a16be0 0%, #fface8 100%);
-  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-  border-radius: 20px;
+  width: 200px;
+  border-radius: 0 20px 20px 0;
 }
+.animate__check i {
+  font-weight: bold;
+  color: #99E2D0;
+  margin-right: 20px;
+  font-size: 30px;
+  opacity: 1;
+  z-index: 1;
+}
+.animate__check i:hover {
+  color: blue;
+  z-index: 2;
+}
+.animate__check:hover {
+  background: #99E2D0;
+}
+
+/*bouton commandez*/
 
 /*# sourceMappingURL=style.css.map */
