@@ -350,7 +350,26 @@ input {
   border: solid red 2px;
   margin-bottom: 40px;
 }
+.card__menu__1 {
+  animation: animatecardmenu 2s ease-in 0ms;
+}
+.card__menu__2 {
+  animation: animatecardmenu 2s ease-in 300ms;
+}
+.card__menu__3 {
+  animation: animatecardmenu 2s ease-in 600ms;
+}
 
+@keyframes animatecardmenu {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .card__menu__title h2 {
   font-weight: 300;
   font-size: medium;

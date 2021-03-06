@@ -456,7 +456,32 @@ width: 100%;
         border: solid red 2px;
         margin-bottom: 40px;
         
+    
+    &__1{
+        animation: animatecardmenu 2s ease-in 0ms;
     }
+    &__2 {
+        animation: animatecardmenu 2s ease-in 300ms;
+    }
+    &__3 {
+        animation: animatecardmenu 2s ease-in 600ms;
+    }
+}
+
+
+    @keyframes animatecardmenu {
+        from{
+           transform:translateY(-40px);
+            opacity: 0;
+
+        }
+        to{
+           transform: translateY(0px);
+            opacity:1;
+        }
+    }
+
+
     .card__menu__title h2{
         
         font-weight: 300;
