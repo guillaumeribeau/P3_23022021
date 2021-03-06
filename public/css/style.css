@@ -104,7 +104,6 @@ input {
   margin-left: 20px;
   margin-right: 20px;
 }
-
 .fonctionnement__title {
   margin-left: 20px;
 }
@@ -188,6 +187,17 @@ input {
 }
 
 /*animation du coeur*/
+.fa-heart {
+  font-size: 25px;
+  margin-right: 15px;
+}
+.fa-heart:hover {
+  font-weight: bold;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /*restaurant nouveau*/
 .nouveau {
   border: solid #99E2D0 1px;
@@ -213,61 +223,82 @@ input {
   list-style: none;
 }
 .footer a {
-  text-decoration: none;
   color: #f1f1f1;
+}
+.footer:hover a {
+  text-decoration: underline;
+  color: white;
 }
 .footer i {
   margin-right: 5px;
 }
 
 .footer__logo {
-  stroke: yellow;
-  fill: chartreuse;
-  width: 100px;
+  font-family: "shrikhand";
+  color: white;
+  margin-left: 35px;
+  text-decoration: none;
 }
 
 /*loading-spinner*/
-/*.loader {
-    height: 100%;
-    width: 100%;
+.section {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: section 3s;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 
-.custom-loading-spinner {
-    cursor: progress;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.loader {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #FF79DA;
+  border-radius: 50%;
+  top: 30%;
+  left: 30%;
+  position: relative;
+  margin-left: 300px;
+  opacity: 0;
+  animation: spin 6s linear;
 }
-.custom-loading-spinner::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10001;
-    overflow: hidden;
-    background: #0b0b0b;
-    opacity: 0.6;
+
+.loader-spinner::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  left: -10px;
+  bottom: -10px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  animation: spin 3s linear;
 }
-.custom-loading-spinner::after {
-    box-sizing: border-box;
-    z-index: 10002;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-    border: 3px solid #f3f3f3;
-    border-top: 3px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: custom-loading 1s linear;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-@keyframes custom-loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes section {
+  from {
+    z-index: 10;
+  }
+  to {
+    z-index: -10;
+  }
 }
- */
 /* ----fiche pour les restaurants-------------------------------*/
 /*header fiche restaurant*/
 .header__restaurant {
@@ -283,6 +314,7 @@ input {
 }
 .header__logo div i {
   padding-left: 20px;
+  font-size: 20px;
 }
 
 /* main fiche restaurants */
@@ -334,15 +366,12 @@ input {
 .choice {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: white;
   width: 100%;
   border-radius: 20px;
   margin-bottom: 10px;
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
-  position: relative;
-}
-.choice:hover {
-  width: 90%;
 }
 .choice h3 {
   margin: 0;
@@ -356,30 +385,26 @@ input {
   font-weight: 300;
 }
 
-.animate__check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
+.check {
+  width: 50px;
+  border-radius: 0 20px 20px 0;
   top: 0;
   right: 0;
-  width: 200px;
-  border-radius: 0 20px 20px 0;
+  background: lightgray;
 }
-.animate__check i {
+
+.check i {
+  padding: 17px 0 17px 8px;
   font-weight: bold;
   color: #99E2D0;
-  margin-right: 20px;
   font-size: 30px;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: transform 5s ease-in-out 2s;
+}
+.check i:hover {
   opacity: 1;
-  z-index: 1;
-}
-.animate__check i:hover {
-  color: blue;
-  z-index: 2;
-}
-.animate__check:hover {
-  background: #99E2D0;
+  transform: rotate 180deg;
 }
 
 /*bouton commandez*/
