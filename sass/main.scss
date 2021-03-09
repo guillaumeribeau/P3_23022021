@@ -346,14 +346,13 @@ background:-webkit-linear-gradient($colour-primary, $colour-secondary);
     display: block;
     width: 100px;
     height: 100px;
+    top:50%;
+    left: 50%;
     border: 10px solid $colour-secondary;
     border-radius: 50%;
-    top:30%;
-    left: 30%;
     position: relative;
-    margin-left: 300px;
     opacity: 0;
-    animation: spin 6s linear;
+    animation: spin 3s linear;
  
     }
 
@@ -455,31 +454,7 @@ width: 100%;
         width: 90%;
         border: solid red 2px;
         margin-bottom: 40px;
-        
-    
-    &__1{
-        animation: animatecardmenu 2s ease-in 0ms;
-    }
-    &__2 {
-        animation: animatecardmenu 2s ease-in 300ms;
-    }
-    &__3 {
-        animation: animatecardmenu 2s ease-in 600ms;
-    }
-}
-
-
-    @keyframes animatecardmenu {
-        from{
-           transform:translateY(-40px);
-            opacity: 0;
-
         }
-        to{
-           transform: translateY(0px);
-            opacity:1;
-        }
-    }
 
 
     .card__menu__title h2{
@@ -499,52 +474,108 @@ width: 100%;
 .choice {
     display: flex;
     justify-content:space-between;
-    align-items:center;
-    background-color: white;
-    width: 100%;
+     background-color: white;
+     border: 2px solid yellow;
         border-radius: 20px;
         margin-bottom: 10px;
         box-shadow:$box-shadow;  
-          
+        overflow: hidden;
+        position: relative;
+      
+  
         
-h3 { 
-        margin: 0;
-        padding:10px 0 0 10px;
-        font-size: small;
+        h3 { 
+            margin: 0;
+            padding:10px 0 0 10px;
+            font-size: small;
+        }
+        h4 {
+            margin: 0;
+            padding:10px 0 10px 10px;
+            font-size: smaller;
+            font-weight: 300;
+        }
+
+
+    &:hover {
+        box-shadow: $box-shadow-visibility;
+        .check {
+
+            box-shadow:$box-shadow-visibility;
+            transform:translatex(-0px);
+            opacity: 1;
+       }
+       .fa-check-circle{
+        transform:rotatey(360deg)
+        
+       }
+       .price {
+           transform: translate(-70px);
+           transition: transform 1s;
+       }
+    }      
+
+
+       &__1{
+        animation: animatechoice 2s ease-in 0ms;
     }
-    h4 {
-        margin: 0;
-        padding:10px 0 10px 10px;
-        font-size: smaller;
-        font-weight: 300;
+    &__2 {
+        animation: animatechoice 2s ease-in 300ms;
     }
-}
+    &__3 {
+        animation: animatechoice 2s ease-in 600ms;
+    }
+    &__4 {
+        animation: animatechoice 2s ease-in 800ms;
+    }
+
   
 
+
+        @keyframes animatechoice {
+
+            from{
+               transform:translateY(-40px);
+                opacity: 0;
+            }
+
+            to{
+               transform: translateY(0px);
+                opacity:1;
+            }
+        }
+}
+
+        
+
+.price{
+   position: absolute;
+   right:15px;
+   top:12px;
+   
+
+}
+
 .check {
-   width:50px;
+   width:70px;
    border-radius: $border-radius;
    top: 0;
    right: 0;
-   background: lightgray;
-  
+   background: $colour-tertiary;
+   transform-origin:right;
+   opacity: 1;
+   transform: translateX(70px);
+   transition: transform 2s;  
 }      
 
-.check i {
+
+.fa-check-circle{
        padding: 17px 0 17px 8px;
        font-weight: bold;
-       color: $colour-tertiary;
+       color:white;
        font-size:30px;
-       opacity: 0;
-       transform: rotate(0deg);
-       transition:transform 5s ease-in-out 2s;
-
-       &:hover {
-        
-           opacity: 1;
-           transform:rotate (180deg);
-          
-       }
+       transform: rotatey(0deg);
+       transition:transform 1s;
 }
 
 
@@ -556,5 +587,6 @@ h3 {
 .btn__commander{
     @extend.btn
 }
+
 
 
