@@ -1,4 +1,3 @@
-/* translation du check retaurants*/
 /* remplissage du coeur */
 /* animation sur les choix de restaurants */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
@@ -440,16 +439,16 @@ a {
   transform: translate(-70px);
   transition: transform 1s;
 }
-.choice:hover__1 {
+.choice__1 {
   animation: animatechoice 2s ease-in 0ms;
 }
-.choice:hover__2 {
+.choice__2 {
   animation: animatechoice 2s ease-in 300ms;
 }
-.choice:hover__3 {
+.choice__3 {
   animation: animatechoice 2s ease-in 600ms;
 }
-.choice:hover__4 {
+.choice__4 {
   animation: animatechoice 2s ease-in 800ms;
 }
 
