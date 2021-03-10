@@ -1,9 +1,65 @@
+/* animation sur les choix de restaurants */
+/*loading-spinner*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   font-family: "Roboto", "sans serif";
   box-sizing: border-box;
   margin: 0;
+}
+body .section {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: section 3s;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+body .loader {
+  display: block;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  border: 10px solid #FF79DA;
+  border-radius: 50%;
+  position: relative;
+  opacity: 0;
+  animation: spin 3s linear;
+}
+body .loader-spinner::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  left: -10px;
+  bottom: -10px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  animation: spin 3s linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes section {
+  from {
+    z-index: 10;
+  }
+  to {
+    z-index: -10;
+  }
 }
 
 a {
@@ -390,63 +446,5 @@ input {
 
 /*bouton commandez*/
 /* polices */
-/*loading-spinner*/
-.section {
-  display: flex;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.9);
-  animation: section 3s;
-  animation-delay: 0s;
-  animation-fill-mode: none;
-  animation-delay: 2s;
-  animation-fill-mode: both;
-}
-
-.loader {
-  display: block;
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  border: 10px solid #FF79DA;
-  border-radius: 50%;
-  position: relative;
-  opacity: 0;
-  animation: spin 3s linear;
-}
-
-.loader-spinner::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  left: -10px;
-  bottom: -10px;
-  border: 10px solid transparent;
-  border-radius: 50%;
-  border-top-color: #9356DC;
-  animation: spin 3s linear;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes section {
-  from {
-    z-index: 10;
-  }
-  to {
-    z-index: -10;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

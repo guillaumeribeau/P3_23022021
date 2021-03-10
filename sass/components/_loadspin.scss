@@ -1,0 +1,74 @@
+
+/*loading-spinner*/
+
+@mixin loadspin {
+    
+
+.section{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: section 3s;
+        animation-delay: 0s;
+        animation-fill-mode: none;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+    
+
+.loader{
+    display: block;
+    width: 100px;
+    height: 100px;
+    top:50%;
+    left: 50%;
+    border: 10px solid $colour-secondary;
+    border-radius: 50%;
+    position: relative;
+    opacity: 0;
+    animation: spin 3s linear;
+ 
+    }
+
+ .loader-spinner {
+   &::after {
+     content: '';
+     position: absolute;
+     top:-10px;
+     right:-10px;
+     left:-10px;
+     bottom:-10px;
+     border: 10px solid transparent;
+    border-radius: 50%;
+    border-top-color: $colour-primary;
+    animation: spin 3s linear ;
+   }
+
+ }
+
+ @keyframes spin {
+     from{
+         transform: rotate(0deg);
+         opacity: 1;
+        
+     }
+     to{
+         transform: rotate(360deg);
+         
+     }
+ }
+
+@keyframes section {
+    from {
+        z-index: 10;
+    }
+       to {
+       z-index:-10;
+    }
+}
+    
+
+}
