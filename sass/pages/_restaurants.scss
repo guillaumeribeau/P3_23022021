@@ -1,38 +1,11 @@
-/*header fiche restaurant*/
-.header__restaurant {
-    display: flex;
-    flex-direction: column;
-      
-}
 
-
-.header__logo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-bottom: 15px;
-    
-      div i {
-        padding-left: 20px;
-        font-size: 20px;
-        
-      }
-       
-}
 
 /* main fiche restaurants */ 
-
-.image__restaurant {
-width: 100%;
-}
-
-
 
 .fiche__menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 2px blue;
     background-color:$colour-background;
     position: relative;
     margin-top: -12%;
@@ -43,19 +16,20 @@ width: 100%;
 .restaurant__title {
     display: flex;
     align-items: center;
-    justify-content:flex-start;
-    border: solid springgreen 2px;
+    justify-content:space-between;
     width: 90%;
-    z-index:3;
+    
    
        h1 {
            padding-right: 100px;
        }
-  }
+       div i{
+           @include heart;
+       }
+}
 
     .card__menu {
         width: 90%;
-        border: solid red 2px;
         margin-bottom: 40px;
         }
 
@@ -77,14 +51,13 @@ width: 100%;
 .choice {
     display: flex;
     justify-content:space-between;
-     background-color: white;
-     border: 2px solid yellow;
-        border-radius: 20px;
-        margin-bottom: 10px;
-        box-shadow:$box-shadow;  
-        overflow: hidden;
-        position: relative;
-       
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow:$box-shadow;  
+    overflow: hidden;
+    position: relative;
+
   
         
         h3 { 
@@ -102,54 +75,9 @@ width: 100%;
 
     &:hover {
         box-shadow: $box-shadow-visibility;
-        .check {
-
-            box-shadow:$box-shadow-visibility;
-            transform:translatex(-0px);
-            opacity: 1;
-       }
-       .fa-check-circle{
-        transform:rotatey(360deg)
-        
-       }
-       .price {
-           transform: translate(-70px);
-           transition: transform 1s;
-       }
-    }      
-
-
-       &__1{
-        animation: animatechoice 2s ease-in 0ms;
-    }
-    &__2 {
-        animation: animatechoice 2s ease-in 300ms;
-    }
-    &__3 {
-        animation: animatechoice 2s ease-in 600ms;
-    }
-    &__4 {
-        animation: animatechoice 2s ease-in 800ms;
-    }
-
-  
-
-
-        @keyframes animatechoice {
-
-            from{
-               transform:translateY(-40px);
-                opacity: 0;
-            }
-
-            to{
-               transform: translateY(0px);
-                opacity:1;
-            }
-        }
+      @include choix;}
+       
 }
-
-        
 
 .price{
    position: absolute;
@@ -181,15 +109,41 @@ width: 100%;
        transition:transform 1s;
 }
 
-
-
-
-
 /*bouton commandez*/
-    
+
 .btn__commander{
-    @extend.btn
+    @include btn;
 }
 
 
 
+@media only screen and ( min-width:1024px){
+    
+    .restaurant__title {
+        position: absolute;
+        top:-100px;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    
+    .fiche__menu {
+        margin-top:100px;
+        margin-bottom: 70px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card__menu {
+        margin-left: 20px;
+    }
+    .card__menu__title h2{
+        margin-left: 10px;
+    }
+
+ .btn__commander{
+     margin-left: 180px;
+     height: 80px;;
+     font-size: 25px;
+ }
+
+
+}

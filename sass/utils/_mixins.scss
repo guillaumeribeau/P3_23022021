@@ -4,3 +4,54 @@
     
 }
 
+/* translation du check retaurants*/
+
+@mixin choix {
+
+    .check {
+    
+        box-shadow:$box-shadow-visibility;
+        transform:translatex(-0px);
+        opacity: 1;
+    }
+    .fa-check-circle{
+    transform:rotatey(360deg)
+    
+    }
+    .price {
+       transform: translate(-70px);
+       transition: transform 1s;
+    }
+      
+    &__1{
+    animation: animatechoice 2s ease-in 0ms;
+    }
+    &__2 {
+    animation: animatechoice 2s ease-in 300ms;
+    }
+    &__3 {
+    animation: animatechoice 2s ease-in 600ms;
+    }
+    &__4 {
+    animation: animatechoice 2s ease-in 800ms;
+    }
+    
+    }
+
+
+/* remplissage du coeur */
+
+    @mixin heart {
+    
+        font-size: 25px;
+        margin-right: 15px;
+        transition: all 2s linear;
+      
+            &:hover {
+            font-weight: bold;
+            background:-webkit-linear-gradient($colour-primary, $colour-secondary);
+            -webkit-background-clip: text;
+            color: transparent;
+            }
+            
+    }

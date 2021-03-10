@@ -1,0 +1,68 @@
+/* header*/
+header{
+  margin-top: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-around;
+   img{
+    width: 30%;}
+}
+
+
+.input_container {
+  display: flex;
+  justify-content:center;
+  position: relative;
+  margin-top: 20px;
+}
+
+   input {
+       text-align: center;
+       background-color:lightgray;
+       font-size: 20px;
+       width: 100%;
+       padding:10px;
+      }
+
+       
+.input_icon{
+  padding-top:10px;
+  padding-right: 170px;
+  position: absolute; 
+   font-size: 21px; 
+}
+
+
+
+
+
+
+  /*header fiche restaurant*/
+
+.header__restaurant {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+      
+}
+
+.header__logo{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 15px;
+    
+      div i {
+        padding-left: 20px;
+        font-size: 20px;
+        
+      }
+       
+}
+
+.image__restaurant {
+    width: 100%;
+    max-height:350px;
+}
