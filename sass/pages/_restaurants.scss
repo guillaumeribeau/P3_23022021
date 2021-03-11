@@ -82,7 +82,7 @@
             opacity: 1;
         }
         .fa-check-circle{
-        transform:rotatey(360deg)
+        transform:rotate(360deg)
         
         }
         .price {
@@ -93,19 +93,21 @@
 }
        
     &__1{
-        animation: animatechoice 2s ease-in 0ms;
+        animation: animatechoice 1200ms linear 0ms;
         }
         &__2 {
-        animation: animatechoice 2s ease-in 300ms;
+        animation: animatechoice 1500ms linear 300ms;
         }
         &__3 {
-        animation: animatechoice 2s ease-in 600ms;
+        animation: animatechoice 1500ms linear 600ms;
         }
         &__4 {
-        animation: animatechoice 2s ease-in 800ms;
+        animation: animatechoice 1500ms linear 900ms;
         }
 
 }
+
+
 
 
 .price{
@@ -125,7 +127,7 @@
    transform-origin:right;
    opacity: 1;
    transform: translateX(70px);
-   transition: transform 2s;  
+   transition: transform 1200ms;  
 }      
 
 
@@ -134,8 +136,8 @@
        font-weight: bold;
        color:white;
        font-size:30px;
-       transform: rotatey(0deg);
-       transition:transform 1s;
+       transform: rotate(180deg);
+       transition:transform 1000ms;
 }
 
 /*bouton commandez*/
@@ -143,8 +145,6 @@
 .btn__commander{
     @include btn;
 }
-
-
 
 @media only screen and ( min-width:1024px){
     

@@ -3,12 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @keyframes animatechoice {
-  from {
-    transform: translateY(-40px);
+  0% {
+    transform: translateY(10px);
     opacity: 0;
   }
-  to {
-    transform: translateY(0px);
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -83,22 +83,22 @@ input {
 }
 .footer li {
   padding-bottom: 5px;
+  color: white;
 }
-.footer a {
-  color: #f1f1f1;
-}
-.footer:hover a {
+.footer li:hover {
   text-decoration: underline;
   color: white;
 }
-.footer i {
+
+i {
   margin-right: 5px;
 }
 
 .footer__logo {
   font-family: "shrikhand";
   color: white;
-  margin-left: 35px;
+  font-size: 20px;
+  margin-left: 40px;
   margin-top: 15px;
   text-decoration: none;
 }
@@ -110,12 +110,14 @@ body {
 }
 body .section {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   height: 100%;
   width: 100%;
   z-index: 10000;
   background-color: rgba(255, 255, 255, 0.9);
-  animation: section 3s;
+  animation: section 2s;
   animation-delay: 0s;
   animation-fill-mode: none;
   animation-delay: 2s;
@@ -125,13 +127,11 @@ body .loader {
   display: block;
   width: 100px;
   height: 100px;
-  top: 50%;
-  left: 50%;
   border: 10px solid #FF79DA;
   border-radius: 50%;
   position: relative;
   opacity: 0;
-  animation: spin 3s linear;
+  animation: spin 2s linear;
 }
 body .loader-spinner::after {
   content: "";
@@ -143,7 +143,7 @@ body .loader-spinner::after {
   border: 10px solid transparent;
   border-radius: 50%;
   border-top-color: #9356DC;
-  animation: spin 3s linear;
+  animation: spin 2s linear;
 }
 @keyframes spin {
   from {
@@ -198,6 +198,7 @@ a {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
   color: white;
+  font-size: 12px;
   border: none;
   cursor: pointer;
   position: relative;
@@ -290,7 +291,7 @@ a {
 }
 .card__restaurant img {
   border-radius: 20px 20px 0px 0px;
-  height: 180px;
+  height: 250px;
 }
 .card__restaurant .far {
   font-size: 25px;
@@ -345,13 +346,7 @@ a {
   }
 
   .card__fonctionnement {
-    padding-right: 15px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  body {
-    width: 1200px;
-    margin: auto;
+    padding-right: 30px;
   }
 }
 /* main fiche restaurants */
@@ -433,23 +428,23 @@ a {
   opacity: 1;
 }
 .choice:hover .fa-check-circle {
-  transform: rotatey(360deg);
+  transform: rotate(360deg);
 }
 .choice:hover .price {
   transform: translate(-70px);
   transition: transform 1s;
 }
 .choice__1 {
-  animation: animatechoice 2s ease-in 0ms;
+  animation: animatechoice 1200ms linear 0ms;
 }
 .choice__2 {
-  animation: animatechoice 2s ease-in 300ms;
+  animation: animatechoice 1500ms linear 300ms;
 }
 .choice__3 {
-  animation: animatechoice 2s ease-in 600ms;
+  animation: animatechoice 1500ms linear 600ms;
 }
 .choice__4 {
-  animation: animatechoice 2s ease-in 800ms;
+  animation: animatechoice 1500ms linear 900ms;
 }
 
 .price {
@@ -467,7 +462,7 @@ a {
   transform-origin: right;
   opacity: 1;
   transform: translateX(70px);
-  transition: transform 2s;
+  transition: transform 1200ms;
 }
 
 .fa-check-circle {
@@ -475,8 +470,8 @@ a {
   font-weight: bold;
   color: white;
   font-size: 30px;
-  transform: rotatey(0deg);
-  transition: transform 1s;
+  transform: rotate(180deg);
+  transition: transform 1000ms;
 }
 
 /*bouton commandez*/
@@ -489,6 +484,7 @@ a {
   background: linear-gradient(0deg, #9356DC, #FF79DA);
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
   color: white;
+  font-size: 12px;
   border: none;
   cursor: pointer;
   position: relative;

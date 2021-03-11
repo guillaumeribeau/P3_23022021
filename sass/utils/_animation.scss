@@ -2,18 +2,15 @@
 
 
 /* animation sur les choix de restaurants */
-
 @keyframes animatechoice {
-
-    from{
-       transform:translateY(-40px);
+    0% {
+        
+        transform: translateY(10px);
         opacity: 0;
     }
 
-    to{
-       transform: translateY(0px);
-        opacity:1;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
-
-
