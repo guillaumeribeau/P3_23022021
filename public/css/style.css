@@ -12,6 +12,39 @@
     opacity: 1;
   }
 }
+.btn, .btn__commander, .btn__explorer {
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  margin-top: 25px;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::after, .btn__commander:hover::after, .btn__explorer:hover::after {
+  opacity: 1;
+}
+.btn::after, .btn__commander::after, .btn__explorer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#a16be0, #ff93e1);
+  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 20px;
+}
+
 /*loading-spinner*/
 /* header*/
 header {
@@ -187,39 +220,6 @@ a {
   margin-bottom: 15px;
   font-size: 20px;
   text-align: center;
-}
-
-.btn__explorer {
-  width: 200px;
-  height: 35px;
-  border-radius: 20px;
-  margin-bottom: 60px;
-  margin-top: 25px;
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
-  color: white;
-  font-size: 12px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-.btn__explorer:hover::after {
-  opacity: 1;
-}
-.btn__explorer::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(#a16be0, #ff93e1);
-  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-  border-radius: 20px;
 }
 
 /* section fonctionnement*/
@@ -475,39 +475,6 @@ a {
 }
 
 /*bouton commandez*/
-.btn__commander {
-  width: 200px;
-  height: 35px;
-  border-radius: 20px;
-  margin-bottom: 60px;
-  margin-top: 25px;
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
-  color: white;
-  font-size: 12px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-.btn__commander:hover::after {
-  opacity: 1;
-}
-.btn__commander::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(#a16be0, #ff93e1);
-  box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.85);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
-  border-radius: 20px;
-}
-
 @media only screen and (min-width: 1024px) {
   .restaurant__title {
     position: absolute;
