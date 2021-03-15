@@ -1,8 +1,6 @@
 
 /*loading-spinner*/
 
-@mixin loadspin {
-    
 
 .section{
     display: flex;
@@ -49,12 +47,14 @@
 
  }
 
+
+
  @keyframes spin {
      from{
          transform: rotate(0deg);
          opacity: 1;
+        }
         
-     }
      to{
          transform: rotate(360deg);
          
@@ -71,4 +71,4 @@
 }
     
 
-}
+

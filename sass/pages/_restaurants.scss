@@ -108,14 +108,10 @@
 }
 
 
-
-
 .price{
    position: absolute;
    right:15px;
    top:12px;
-   
-
 }
 
 .check {
@@ -129,7 +125,6 @@
    transform: translateX(70px);
    transition: transform 1200ms;  
 }      
-
 
 .fa-check-circle{
        padding: 17px 0 17px 8px;
@@ -145,6 +140,8 @@
 .btn__commander{
     @extend .btn;
 }
+
+
 
 @media only screen and ( min-width:1024px){
     

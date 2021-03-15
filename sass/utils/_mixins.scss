@@ -8,17 +8,17 @@
 
 /* remplissage du coeur */
 
-    @mixin heart {
-    
-        font-size: 25px;
-        margin-right: 15px;
-        transition: all 2s linear;
-      
-            &:hover {
-            font-weight: bold;
-            background:-webkit-linear-gradient($colour-primary, $colour-secondary);
-            -webkit-background-clip: text;
-            color: transparent;
-            }
-            
+@mixin heart {
+
+font-size: 25px;
+margin-right: 15px;
+transition: all 2s linear;
+
+    &:hover {
+    font-weight: bold;
+    background:-webkit-linear-gradient($colour-primary, $colour-secondary);
+    -webkit-background-clip: text;
+    color: transparent;
     }
+
+}
