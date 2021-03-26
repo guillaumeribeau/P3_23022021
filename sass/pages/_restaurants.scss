@@ -70,10 +70,8 @@ overflow: hidden;
     box-shadow:$box-shadow;  
     overflow: hidden;
     position: relative;
+    opacity: 0;
 
-
-  
-        
         h3 { 
             margin: 0;
             padding:10px 0 0 10px;
@@ -114,16 +112,20 @@ overflow: hidden;
 }
        
     &__1{
-        animation: animatechoice 1200ms linear 0ms;
+        animation: animatechoice 1500ms linear 0ms;
+        animation-fill-mode: forwards;
         }
         &__2 {
-        animation: animatechoice 1500ms linear 300ms;
+        animation: animatechoice 1500ms linear 400ms;
+        animation-fill-mode: forwards;
         }
         &__3 {
-        animation: animatechoice 1500ms linear 600ms;
+        animation: animatechoice 1500ms linear 800ms;
+        animation-fill-mode: forwards;
         }
         &__4 {
-        animation: animatechoice 1500ms linear 900ms;
+        animation: animatechoice 1500ms linear 1200ms;
+        animation-fill-mode: forwards;
         }
 
 }
@@ -143,7 +145,7 @@ right:10px;
    right: 0;
    background: $colour-tertiary;
    transform-origin:right;
-   opacity: 1;
+   /*opacity: 1;*/
    transform: translateX(70px);
    transition: all 500ms;  
 }      

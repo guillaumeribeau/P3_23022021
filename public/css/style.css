@@ -23,7 +23,7 @@
 @keyframes animatechoice {
   0% {
     transform: translateY(10px);
-    opacity: 0;
+    /*opacity: 0;*/
   }
   100% {
     transform: translateY(0);
@@ -443,6 +443,7 @@ img {
   box-shadow: -7px 8px 11px -3px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   position: relative;
+  opacity: 0;
 }
 .choice h3 {
   margin: 0;
@@ -477,16 +478,20 @@ img {
   transition: transform 500ms;
 }
 .choice__1 {
-  animation: animatechoice 1200ms linear 0ms;
+  animation: animatechoice 1500ms linear 0ms;
+  animation-fill-mode: forwards;
 }
 .choice__2 {
-  animation: animatechoice 1500ms linear 300ms;
+  animation: animatechoice 1500ms linear 400ms;
+  animation-fill-mode: forwards;
 }
 .choice__3 {
-  animation: animatechoice 1500ms linear 600ms;
+  animation: animatechoice 1500ms linear 800ms;
+  animation-fill-mode: forwards;
 }
 .choice__4 {
-  animation: animatechoice 1500ms linear 900ms;
+  animation: animatechoice 1500ms linear 1200ms;
+  animation-fill-mode: forwards;
 }
 
 .price {
@@ -502,7 +507,7 @@ img {
   right: 0;
   background: #99E2D0;
   transform-origin: right;
-  opacity: 1;
+  /*opacity: 1;*/
   transform: translateX(70px);
   transition: all 500ms;
 }
